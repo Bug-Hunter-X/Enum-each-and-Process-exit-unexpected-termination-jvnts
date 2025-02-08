@@ -1,0 +1,3 @@
+# Elixir Enum.each and Process.exit Unexpected Termination
+
+This example showcases a potential issue when using `Enum.each` in Elixir along with `Process.exit`.  The expectation might be that `Enum.each` continues iterating through the list, but because `Process.exit` is called within the anonymous function, the entire enumeration is abruptly stopped. This behavior differs from the expectation that `Enum.each` would only terminate the function within that scope and not exit from the whole process.
